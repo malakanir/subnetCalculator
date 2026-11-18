@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Subnet Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>IPv4 Subnet Calculator</h1>
+
+      <form id="subnet-form">
+        <div class="fields">
+          <div class="field">
+            <label for="subnet-address">IP Address</label>
+            <input
+              id="subnet-address"
+              name="address"
+              type="text"
+              autocomplete="off"
+              spellcheck="false"
+              inputmode="decimal"
+              placeholder="192.168.10.37"
+            />
+          </div>
+          <div class="field">
+            <label for="subnet-mask">Subnet Mask or CIDR</label>
+            <input
+              id="subnet-mask"
+              name="mask"
+              type="text"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="255.255.255.192 or /26"
+            />
+          </div>
+          <div class="field wide">
+            <label for="subnet-cidr">CIDR prefix: <span id="subnet-cidr-value">/26</span></label>
+            <input id="subnet-cidr" name="cidr" type="range" min="0" max="32" step="1" value="26" />
+          </div>
+        </div>
+      </form>
+
+      <section id="subnet-output" aria-live="polite"></section>
+    </main>
+
+    <script type="module" src="dist/main.js"></script>
+  </body>
+</html>

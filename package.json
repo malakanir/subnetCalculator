@@ -1,0 +1,14 @@
+{
+  "name": "subnet-calculator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "IPv4 subnet calculator (HTML + TypeScript, GitHub Pages)",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "npx serve ."
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}
